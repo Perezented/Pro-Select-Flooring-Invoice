@@ -1,0 +1,83 @@
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    width: 8.5in;
+    height: 11in;
+    border: 1px dotted magenta;
+}
+.datGrid() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.invoice {
+    section {
+        margin: 3% 0;
+    }
+    margin: 0 4% 0 5%;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        h1 {
+            font-size: 3rem;
+        }
+        .grey {
+            color: lightgrey;
+            margin-right: 3%;
+            font-size: 4rem;
+        }
+    }
+    .topSection {
+        display: flex;
+        justify-content: space-between;
+        .address {
+            line-height: 250%;
+        }
+        .numbersDate {
+            .datGrid();
+            border: 1px solid black;
+            width: 15%;
+        }
+    }
+    .billTo {
+        border: 1px solid red;
+        div {
+            .datGrid();
+            width: 35%;
+            text-align: left;
+            h5 {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    .table {
+        border: 1px dotted blue;
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        .mainTableOutline {
+            border: 1px dotted green;
+        }
+        .tableHeadings {
+            border: 1px dotted red;
+            display: grid;
+            grid-template-columns: 4fr 2fr 1fr;
+            text-align: center;
+        }
+    }
+    .bottomTotal {
+        border: 1px dotted magenta;
+        justify-self: flex-end;
+        margin-top: -3%;
+        padding: 0;
+        text-align: right;
+        display: flex;
+        h4,
+        p {
+            margin: 1%;
+        }
+    }
+}
