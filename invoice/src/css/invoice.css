@@ -2,15 +2,16 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
-  width: 8.5in;
-  height: 11in;
+  width: 8in;
+  height: 10.25in;
   border: 1px dotted magenta;
 }
 .invoice {
-  margin: 0 4% 0 5%;
+  padding: 0;
+  margin: 0;
 }
 .invoice section {
-  margin: 3% 0;
+  margin: 2% 0;
 }
 .invoice header {
   display: flex;
@@ -22,12 +23,19 @@ html {
 }
 .invoice header .grey {
   color: lightgrey;
-  margin-right: 3%;
+  margin: 0 3% 0;
+  padding: 0;
   font-size: 4rem;
 }
 .invoice .topSection {
+  width: 94%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+.invoice .topSection p {
+  padding: 0;
+  margin: 0;
 }
 .invoice .topSection .address {
   line-height: 250%;
@@ -37,10 +45,19 @@ html {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   border: 1px solid black;
-  width: 15%;
+  width: 25%;
+  text-align: left;
+}
+.invoice .topSection .numbersDate h5,
+.invoice .topSection .numbersDate p {
+  align-self: center;
+  justify-self: left;
 }
 .invoice .billTo {
+  width: 94%;
+  margin: 0 auto;
   border: 1px solid red;
+  line-height: 50%;
 }
 .invoice .billTo div {
   display: grid;
@@ -50,14 +67,16 @@ html {
   text-align: left;
 }
 .invoice .billTo div h5 {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 .invoice .table {
   border: 1px dotted blue;
-  height: 55vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
+  width: 94%;
+  margin: 0 auto;
 }
 .invoice .table .mainTableOutline {
   border: 1px dotted green;
@@ -68,15 +87,44 @@ html {
   grid-template-columns: 4fr 2fr 1fr;
   text-align: center;
 }
+.invoice .table .tableHeadings h4 {
+  margin: 0;
+  border: 1px solid black;
+  height: 16px;
+}
+.invoice .table .insert {
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  text-align: left;
+  border: 1px solid black;
+}
 .invoice .bottomTotal {
+  width: 94%;
+  margin: 0 auto;
   border: 1px dotted magenta;
   justify-self: flex-end;
-  margin-top: -3%;
+  margin-top: -2%;
   padding: 0;
-  text-align: right;
-  display: flex;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+}
+.invoice .bottomTotal .noBorder {
+  border: 1px solid white;
 }
 .invoice .bottomTotal h4,
 .invoice .bottomTotal p {
-  margin: 1%;
+  margin: 1% 0;
+  border: 1px solid black;
+}
+.invoice .thanks {
+  width: 94%;
+  margin: 0 auto;
+}
+.invoice .thanks .bold {
+  font-weight: 700;
+}
+.invoice .thanks .center {
+  font-weight: 700;
+  text-align: center;
 }

@@ -2,20 +2,29 @@ html {
     font-size: 62.5%;
     margin: 0;
     padding: 0;
-    width: 8.5in;
-    height: 11in;
+    width: 8in;
+    height: 10.25in;
     border: 1px dotted magenta;
+}
+.nothing() {
+    padding: 0;
+    margin: 0;
 }
 .datGrid() {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
+.container() {
+    width: 94%;
+    margin: 0 auto;
+}
 .invoice {
+    .nothing();
     section {
-        margin: 3% 0;
+        margin: 2% 0;
     }
-    margin: 0 4% 0 5%;
+    // margin: 0 4% 0 5%;
     header {
         display: flex;
         justify-content: space-between;
@@ -25,39 +34,53 @@ html {
         }
         .grey {
             color: lightgrey;
-            margin-right: 3%;
+            margin: 0 3% 0;
+            padding: 0;
             font-size: 4rem;
         }
     }
     .topSection {
+        .container();
         display: flex;
         justify-content: space-between;
+        p {
+            .nothing();
+        }
         .address {
             line-height: 250%;
         }
         .numbersDate {
             .datGrid();
             border: 1px solid black;
-            width: 15%;
+            width: 25%;
+            text-align: left;
+            h5,
+            p {
+                align-self: center;
+                justify-self: left;
+            }
         }
     }
     .billTo {
+        .container();
         border: 1px solid red;
+        line-height: 50%;
         div {
             .datGrid();
             width: 35%;
             text-align: left;
             h5 {
-                margin: 0;
-                padding: 0;
+                .nothing();
             }
         }
     }
     .table {
         border: 1px dotted blue;
-        height: 55vh;
+        height: 50vh;
         display: flex;
         flex-direction: column;
+        width: 94%;
+        margin: 0 auto;
         .mainTableOutline {
             border: 1px dotted green;
         }
@@ -66,18 +89,46 @@ html {
             display: grid;
             grid-template-columns: 4fr 2fr 1fr;
             text-align: center;
+            h4 {
+                margin: 0;
+                border: 1px solid black;
+                height: 16px;
+            }
+        }
+        .insert {
+            display: grid;
+            grid-template-columns: 4fr 2fr 1fr;
+            text-align: left;
+            border: 1px solid black;
         }
     }
     .bottomTotal {
+        .container();
         border: 1px dotted magenta;
         justify-self: flex-end;
-        margin-top: -3%;
+        margin-top: -2%;
         padding: 0;
-        text-align: right;
-        display: flex;
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr;
+        .noBorder {
+            border: 1px solid white;
+        }
         h4,
         p {
-            margin: 1%;
+            margin: 1% 0;
+            border: 1px solid black;
+        }
+    }
+    .thanks {
+        .container();
+        .bold {
+            font-weight: 700;
+        }
+        .center {
+            font-weight: 700;
+            text-align: center;
         }
     }
 }

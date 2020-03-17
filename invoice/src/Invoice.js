@@ -3,7 +3,7 @@ import "../src/css/invoice.css";
 function Invoice() {
     const day = new Date();
 
-    const today = `${day.getMonth()}/${day.getDate()}/${day.getFullYear()}`;
+    const today = `${day.getMonth() + 1}/${day.getDate()}/${day.getFullYear()}`;
 
     return (
         <div className="invoice">
@@ -48,9 +48,11 @@ function Invoice() {
                         <h4>Amount</h4>
                         <h4>Total</h4>
                     </div>
+                    <div className="insert"></div>
                 </div>
             </section>
             <div className="bottomTotal">
+                <p className="noBorder"> </p>
                 <h4>Total</h4>
                 <p>Number Total</p>
             </div>
