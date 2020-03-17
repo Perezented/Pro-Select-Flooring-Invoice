@@ -9,7 +9,7 @@ function Invoice() {
         <div className="invoice">
             <header>
                 <h1>Pro-Select Flooring LLC</h1>
-                <h1 className="grey">INVOICE</h1>
+                <h1 className="grey">{"invoice".toUpperCase()}</h1>
             </header>
             <section className="topSection">
                 <div className="address">
